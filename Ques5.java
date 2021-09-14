@@ -1,4 +1,4 @@
-//questioon4.class
+
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -134,31 +134,7 @@ states md = new states("", 0, 0, 0);
 				a.printStackTrace();
 			}
 });
-	 /*btn2.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>()
-		{
-                    
-		 public void handle(ActionEvent event) {
-			 states md = new states("", 0, 0, 0);
-			 
-			 try {
-				ArrayList<Object> value=md.getData(selection);
-				men.setText(""+value.get(0));
-                                permen.setText(""+value.get(1));
-                                women.setText(""+value.get(2));
-                                perwomen.setText(""+value.get(3));
-                                child.setText(""+value.get(4));
-                                perchild.setText(""+value.get(5));
-                                
-				
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		 }
-		 });*/
+	 
 
 	 text1.setStyle("-fx-font: normal bold 20px 'Times New Roman' ");
 	 button.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;");
