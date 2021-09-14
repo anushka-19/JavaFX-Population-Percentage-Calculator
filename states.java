@@ -1,4 +1,4 @@
-//meterData.class
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -34,7 +34,7 @@ public class states{
                 
                 
 		Connection con = 
-				DriverManager.getConnection("jdbc:mysql://localhost:3306/statesdb","anushka","anushka");
+				DriverManager.getConnection("jdbc:mysql://localhost:3306/statesdb","dbusername","dbpassword");
 		Statement st = con.createStatement();
 		ResultSet rs = 
 				st.executeQuery("SELECT * FROM states WHERE state_name= '"+ state_name+"';");
@@ -69,47 +69,7 @@ public class states{
 		
                 return result;
 	}
-	/*public void addData(int houseNumber,int currentMonth)throws ClassNotFoundException, SQLException {
 	
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = 
-				DriverManager.getConnection("jdbc:mysql://localhost:3306/statesdb","anushka","tiger");
-		Statement st = con.createStatement();
-		ResultSet rs = 
-				st.executeQuery("SELECT * FROM meter_reading WHERE houseNumber= "+ houseNumber+";");
-		
-		if(rs.next()==true) {
-			int pmon=0;
-			pmon=rs.getInt("currentMonthReading");
-			
-			PreparedStatement pstmt = con.prepareStatement("INSERT INTO meter_reading values(?,?,?)");
-			pstmt.setInt(1,houseNumber);
-			pstmt.setInt(2,currentMonth);
-			pstmt.setInt(3,pmon);
-		
-			pstmt.executeUpdate();
-
-			pstmt.close();
-			con.close();
-			
-			
-		}else {
-			PreparedStatement pstmt = con.prepareStatement("INSERT INTO meter_reading values(?,?,?)");
-			
-			pstmt.setInt(1,houseNumber);
-			pstmt.setInt(2,currentMonth);
-			pstmt.setInt(3,0);
-
-			pstmt.executeUpdate();
-			pstmt.close();
-			con.close();
-		}
-		
-		st.close();
-		con.close();
-		
-		
-	}*/
 	
 	
 	 
